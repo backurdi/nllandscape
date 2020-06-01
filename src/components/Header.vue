@@ -1,13 +1,26 @@
 <template>
   <header class="header">
     <b-navbar class="p-0" toggleable="md" type="light">
-        <b-navbar-brand>
-        <g-link class="logo-home logo-desktop" to="/">{{ $static.metadata.siteName }}</g-link>
-        <g-link class="logo-home logo–mobile" to="/"><img class="logo-image" alt="logo" src="../assets/images/logo.png"></g-link>
+      <b-navbar-brand>
+        <g-link class="logo-home logo-desktop" to="/">
+          <img
+            class="logo-image"
+            alt="logo"
+            src="https://static.wixstatic.com/media/0844b2_aa91e66526ea44ff9fd1eb416599e990~mv2.png/v1/fill/w_672,h_216,al_c,q_85,usm_0.66_1.00_0.01/NL_aps_gr%25C3%25B8n_logo_edited.webp"
+          />
+        </g-link>
+        <g-link class="logo-home logo–mobile" to="/">
+          <img
+            class="logo-image"
+            alt="logo"
+            src="https://static.wixstatic.com/media/0844b2_aa91e66526ea44ff9fd1eb416599e990~mv2.png/v1/fill/w_672,h_216,al_c,q_85,usm_0.66_1.00_0.01/NL_aps_gr%25C3%25B8n_logo_edited.webp"
+          />
+        </g-link>
       </b-navbar-brand>
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav class="ml-auto">
+          <g-link class="nav--link" to="/">Home</g-link>
           <g-link class="nav--link" to="/about">About</g-link>
           <g-link class="nav--link" to="/blog">Blog</g-link>
           <g-link class="nav--link" to="/contact">Contact</g-link>
@@ -45,10 +58,13 @@ nav {
   &:hover {
     text-decoration: none;
   }
+  .logo-image {
+    width: 240px;
+  }
 }
 
 .logo-desktop {
-  @media(max-width: 419px) {
+  @media (max-width: 419px) {
     display: none;
   }
   @media (min-width: 420px) {
@@ -57,7 +73,7 @@ nav {
 }
 
 .logo–mobile {
-  @media(max-width: 419px) {
+  @media (max-width: 419px) {
     display: default;
   }
   @media (min-width: 420px) {
